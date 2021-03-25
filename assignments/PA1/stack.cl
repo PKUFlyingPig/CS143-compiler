@@ -21,6 +21,10 @@ class Stack {
       }
    };
 
+   term() : String {
+      term
+   };
+
    add(x : String) : Stack {
       (new Stack).init(x, self)
    };
@@ -48,6 +52,35 @@ class Stack {
       )
    };
 
+   execute() : Stack {
+      (
+         let cmd : String <- term ,
+             arg1 : String,
+             arg2 : String,
+             newStack : Stack in
+         if cmd = "+" then
+         ( let func : A2I <- (new A2I) in
+         {
+            newStack <- self.remove();
+            arg1 <- newStack.term();
+            newStack <- newStack.remove();
+            arg2 <- newStack.term();
+            newStack <- newStack.remove();
+            newStack <- newStack.add(func.i2a(func.a2i(arg1) + func.a2i(arg2)));
+         }
+         ) else if cmd = "s" then 
+         {
+            newStack <- self.remove();
+            arg1 <- newStack.term();
+            newStack <- newStack.remove();
+            arg2 <- newStack.term();
+            newStack <- newStack.remove();
+            newStack <- newStack.add(arg1);
+            newStack <- newStack.add(arg2);
+         } else self
+         fi fi
+      )
+   };
 };
 
 class Nil inherits Stack{
@@ -72,7 +105,7 @@ class Main inherits IO {
             else if command = "x" then
                flag <- false
             else if command = "e" then
-               stack <- stack.remove()
+               stack <- stack.execute()
             else stack <- stack.add(command)
             fi fi fi fi fi;
          }
