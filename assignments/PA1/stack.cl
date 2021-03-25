@@ -58,13 +58,26 @@ class Main inherits IO {
    stack : Stack <- (new Nil);
    command : String;
    main() : Object {
-      while true loop {
-         out_string(">");
-         command <- in_string();
-         stack <- stack.add(command);
-         stack.print();
-      }
-      pool
+      (
+         let flag : Bool <- true in
+         while flag loop {
+            out_string(">");
+            command <- in_string();
+            if command = "+" then
+               stack <- stack.add(command)
+            else if command = "s" then
+               stack <- stack.add(command)
+            else if command = "d" then
+               stack.print()
+            else if command = "x" then
+               flag <- false
+            else if command = "e" then
+               stack <- stack.remove()
+            else stack <- stack.add(command)
+            fi fi fi fi fi;
+         }
+         pool
+      )
    };
 
 };
