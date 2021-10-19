@@ -1,0 +1,3 @@
+#name "error_comment.cl"
+#1 ERROR "Unmatched *)"
+#3 ERROR "EOF in comment"

@@ -1,0 +1,9 @@
+#name "nested_comment.cl"
+#6 TYPEID Int
+#6 OBJECTID a
+#6 ';'
+#7 TYPEID Bool
+#7 OBJECTID x
+#7 '='
+#7 INT_CONST 3
+#7 ';'

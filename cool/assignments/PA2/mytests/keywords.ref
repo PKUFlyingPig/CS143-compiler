@@ -1,0 +1,20 @@
+#name "keywords.cl"
+#1 CLASS
+#2 ELSE
+#2 BOOL_CONST false
+#2 FI
+#2 IF
+#2 IN
+#3 INHERITS
+#3 ISVOID
+#3 LET
+#3 LOOP
+#3 POOL
+#4 THEN
+#4 WHILE
+#4 CASE
+#4 ESAC
+#4 NEW
+#4 OF
+#4 NOT
+#4 BOOL_CONST true

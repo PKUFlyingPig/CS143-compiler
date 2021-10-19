@@ -1,0 +1,14 @@
+#name "identifier.cl"
+#1 TYPEID Int
+#1 OBJECTID a
+#1 ';'
+#2 TYPEID SELF_TYPE
+#2 ';'
+#3 TYPEID Bool
+#3 OBJECTID x
+#3 ';'
+#4 OBJECTID self
+#4 ';'
+#5 TYPEID A
+#5 OBJECTID a23_xByy
+#5 ';'

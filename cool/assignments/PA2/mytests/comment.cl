@@ -1,0 +1,2 @@
+-- this is a comment with \n
+-- this is another comment with EOF

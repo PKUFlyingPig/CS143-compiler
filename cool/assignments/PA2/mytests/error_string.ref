@@ -1,0 +1,8 @@
+#name "error_string.cl"
+#1 ERROR "?"
+#3 ERROR "Unterminated string constant"
+#4 ERROR "Unterminated string constant"
+#5 STR_CONST "\tsldfj\naksfj\n"
+#6 TYPEID Int
+#6 OBJECTID a
+#6 ';'
